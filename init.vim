@@ -46,6 +46,13 @@ noremap <C-w>e :$tabnew <bar> terminal<CR>
 
 " autocmd VimEnter * terminal | wincmd d
 
+" tmux navigator
+
+nnoremap <C-h> :TmuxNavigateLeft<CR>
+nnoremap <C-l> :TmuxNavigateRight<CR>
+nnoremap <C-j> :TmuxNavigateDown<CR>
+nnoremap <C-k> :TmuxNavigateUp<CR>
+
 " tab and stuffs
 
 noremap <C-w>1 :-tabnext<CR>
@@ -69,8 +76,8 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 " vue
 
-let g:vim_vue_plugin_config.foldexpr = 0
-let g:vim_vue_plugin_config = { 'syntax': { 'template': ['html', 'pug'], 'script': ['javascript', 'typescript', 'coffee'], 'style': ['css', 'scss', 'sass', 'less', 'stylus'], 'i18n': ['json', 'yaml'], 'route': 'json' }, 'full_syntax': ['json'], 'initial_indent': ['i18n', 'i18n.json', 'yaml'], 'attribute': 1, 'keyword': 1, 'foldexpr': 1, 'debug': 0 }
+" let g:vim_vue_plugin_config.foldexpr = 0
+" let g:vim_vue_plugin_config = { 'syntax': { 'template': ['html', 'pug'], 'script': ['javascript', 'typescript', 'coffee'], 'style': ['css', 'scss', 'sass', 'less', 'stylus'], 'i18n': ['json', 'yaml'], 'route': 'json' }, 'full_syntax': ['json'], 'initial_indent': ['i18n', 'i18n.json', 'yaml'], 'attribute': 1, 'keyword': 1, 'foldexpr': 1, 'debug': 0 }
 
 " Specify the plugin directory
 
@@ -84,6 +91,10 @@ Plug 'wakatime/vim-wakatime'
 
 Plug 'petertriho/nvim-scrollbar'
 Plug 'yuttie/comfortable-motion.vim'
+
+" tmux navigator
+
+Plug 'christoomey/vim-tmux-navigator'
 
 " Lua
 

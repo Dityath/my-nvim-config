@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/dityath/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/dityath/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/dityath/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -123,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dityath/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
     url = "https://github.com/xuyuanp/nerdtree-git-plugin"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/dityath/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

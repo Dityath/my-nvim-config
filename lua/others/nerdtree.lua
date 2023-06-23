@@ -1,5 +1,3 @@
--- nerdtree config
-
 vim.api.nvim_create_autocmd("VimEnter", {
   command = "NERDTree | wincmd p" -- open nerdtree first time entering vim
 })

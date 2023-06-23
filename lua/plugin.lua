@@ -10,7 +10,6 @@ return require('packer').startup(function(use)
 
   -- nvim theme | nvim colorscheme/theme
   use { "catppuccin/nvim", as = "catppuccin" }
-  use 'vim-airline/vim-airline-themes'
 
   -- wakatime | for monitoring hours of code
   use 'wakatime/vim-wakatime'
@@ -88,6 +87,25 @@ return require('packer').startup(function(use)
   use "lukas-reineke/lsp-format.nvim"
   use "hrsh7th/cmp-nvim-lsp"
   use 'hrsh7th/cmp-buffer'
+
+  -- auto completion
+  use 'onsails/lspkind-nvim'
   use 'hrsh7th/nvim-cmp'
+
+  -- code snippet
+  use 'L3MON4D3/LuaSnip'
+
+  -- syntax highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+
+  -- autotag and autopair
+  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-autopairs'
+
+  -- bufferline for tabbing
+  use 'akinsho/nvim-bufferline.lua'
 
 end)

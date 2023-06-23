@@ -6,8 +6,7 @@ require("color")
 require("settings")
 require("keymap")
 
--- other settings
-require("plugin-config")
+-- highlight
 require("others.highlight")
 
 -- lualine
@@ -15,3 +14,20 @@ require("others.lualine")
 
 -- lsp
 require("others.lspconfig")
+require("others.lspkind")
+require("others.cmp")
+
+-- nerdtree
+require("others.nerdtree")
+
+-- treesitter
+require("others.treesitter")
+
+-- autopairs
+
+require("others.autopairs")
+require("others.tsautotag")
+
+--bufferline
+
+require("bufferline")

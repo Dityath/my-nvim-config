@@ -78,5 +78,10 @@ packer.startup(function(use)
 
   -- nerdtree for vscode alike tree folder
   use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-tree/nvim-web-devicons'
+
+  -- tmux nvim navigator
+  use 'christoomey/vim-tmux-navigator'
+
+  -- vim leap
+  use 'ggandor/leap.nvim'
 end)

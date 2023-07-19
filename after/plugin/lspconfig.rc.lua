@@ -40,3 +40,33 @@ nvim_lsp.lua_ls.setup {
     }
   }
 }
+
+-- nvim lsp config for golang
+
+nvim_lsp.gopls.setup {
+  on_attach = on_attach,
+  cmd = { "gopls", "serve" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  root_dir = nvim_lsp.util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      },
+    },
+  },
+}
+
+-- nvim lsp config for c
+
+nvim_lsp.clangd.setup {
+  on_attach = on_attach,
+  cmd = { "clangd", "--background-index" },
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  root_dir = nvim_lsp.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+  init_options = {
+    clangdFileStatus = true
+  }
+}

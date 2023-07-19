@@ -35,4 +35,4 @@ keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<cr>')
 keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<cr>')
 
 -- highlight
-keymap.set('', 'mm', '<cmd>set hlsearch!<cr>')
+keymap.set('', 'mh', '<cmd>set hlsearch!<cr>')

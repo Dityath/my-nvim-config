@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/dityath/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["clangd-nvim"] = {
+    loaded = true,
+    path = "/home/dityath/.local/share/nvim/site/pack/packer/start/clangd-nvim",
+    url = "https://github.com/robert-oleynik/clangd-nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/dityath/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -123,6 +128,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dityath/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/dityath/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -214,6 +226,11 @@ _G.packer_plugins = {
     path = "/home/dityath/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-clang-format"] = {
+    loaded = true,
+    path = "/home/dityath/.local/share/nvim/site/pack/packer/start/vim-clang-format",
+    url = "https://github.com/rhysd/vim-clang-format"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/home/dityath/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
@@ -227,6 +244,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

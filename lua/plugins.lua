@@ -84,4 +84,15 @@ packer.startup(function(use)
 
   -- vim leap
   use 'ggandor/leap.nvim'
+
+  -- markdown previewer
+  use { 
+    "iamcco/markdown-preview.nvim", 
+    run = "cd app && npm install", 
+    ft = { "markdown" } 
+  }
+
+  -- nvim for c language
+  use 'rhysd/vim-clang-format'
+  use 'robert-oleynik/clangd-nvim'
 end)

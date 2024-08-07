@@ -12,10 +12,13 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- solarized theme
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+  -- use {
+  --   'svrana/neosolarized.nvim',
+  --   requires = { 'tjdevries/colorbuddy.nvim' }
+  -- }
+  
+  -- catppuccin theme
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- neovim wakatime (for dashboard monitoring)
   use 'wakatime/vim-wakatime'
@@ -95,4 +98,7 @@ packer.startup(function(use)
   -- nvim for c language
   use 'rhysd/vim-clang-format'
   use 'robert-oleynik/clangd-nvim'
+
+  -- nvim for latex
+  use 'lervag/vimtex'
 end)

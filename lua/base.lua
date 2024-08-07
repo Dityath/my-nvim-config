@@ -50,3 +50,5 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 -- add asterisk in block comments
 vim.opt.formatoptions:append { 'r' }
+
+
